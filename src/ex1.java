@@ -5,7 +5,15 @@ public class ex1
    public static void main(String[] args) {
         int []arr={0,5,12,13,14,15,16,17,18,19,20,40,100,99,5,5,5,5};
        int[]arr2={40,10,9,0,5};
-       System.out.println(ex8(arr2,50));
+       String str="noam";
+       String str2="noajhgfyfyujfjjgcugubjnm";
+       System.out.println(ex10(str,str2));
+     //  int[]arr3=ex9(arr,5);
+     //  for (int i=0;i<arr3.length;i++)
+      // {
+      //     System.out.println(arr3[i]);
+      // }
+       //System.out.println(ex8(arr2,50));
     //   ex7(arr2);
      // boolean [] arr3=ex4(arr);
    //   for (int i=0;i<arr3.length;i++)
@@ -96,5 +104,55 @@ public class ex1
          }
          return -1;
      }
+     public static  int[] ex9(int[] arr,int num)
+     {
+        int countTeenOfNum=0;
+        int countEqualOfNum=0;
+        int contBigOfNum=0;
+        int []newArr=new int[3];
+        for (int i = 0; i < arr.length; i++)
+        {
+            if(arr[i]<num)
+            {
+                countTeenOfNum++;
+            }
+            if (arr[i]==num)
+            {
+                countEqualOfNum++;
+            }
+            if (arr[i]>num)
+            {
+                contBigOfNum++;
+            }
+        }
+        newArr[0]=countTeenOfNum;
+        newArr[1]=countEqualOfNum;
+        newArr[2]=contBigOfNum;
+        return newArr;
      }
+     public   static boolean ex10(String str,String str2)
+     {
+         if (str==null||str.length()==0||str2==null||str2.length()==0)
+             return false;
+         char firstCharStr1=str.charAt(0);
+         char lastCharStr1=str.charAt(str.length()-1);
+         char firstCharStr2=str2.charAt(0);
+         char lastCharStr2=str2.charAt(str2.length()-1);
+         if(firstCharStr1==firstCharStr2&&lastCharStr1==lastCharStr2)
+         {
+             return true;
+         }
+         else
+             {
+             return false;
+             }
+     }
+     public static  int ex11(String [] arr,char test) {
+         int count = 0;
+         for (int i = 0; i < arr.length; i++)
+         {
 
+     }
+         return  count;
+     }
+    }

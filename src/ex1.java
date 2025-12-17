@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ex1
 {
@@ -151,8 +152,67 @@ public class ex1
          int count = 0;
          for (int i = 0; i < arr.length; i++)
          {
+             if (arr[i]!=null)
+             {
+                 for (int j =0; j <  arr[i].length(); j++)
+                     if (arr[i].charAt(j) == test) {
+                         count++;
+                     }
+             }
 
      }
          return  count;
      }
-    }
+     public   static int ex12(String [] arr,String target) {
+       int count = 0;
+
+           if (target==null) {return 0;}
+
+               for (int i =0; i<arr.length; i++)
+                   if (arr[i]!=null)
+                   {
+                     if (arr[i].contains(target)) {
+                         count++;
+                     }
+                   }
+               return count;
+           }
+           public static String reversString (String str) {
+            if (str==null||str.length()==0) return "מחרוזת לא תקינה";
+            char [] arr=new  char[str.length()];
+            for (int i =0; i<arr.length; i++)
+            {
+                arr[i]=str.charAt(i);
+
+            }
+            String  result="";
+            for (int i =str.length()-1; i>=0; i--) {
+            result += arr[i];
+
+            }
+            return result;
+           }
+        public void ex15()
+        {
+            double sum=0;
+            double avg=0;
+         Scanner in=new Scanner(System.in);
+         int []arr=new int[10];
+         for(int i=0;i<arr.length;i++)
+         {
+             System.out.println("הכנס מספר שלם");
+             arr[i]=in.nextInt();
+             sum+=arr[i];
+         }
+         avg=sum/arr.length;
+         for (int i=0;i<arr.length;i++)
+             {
+             if(arr[i]>avg)
+             {
+                 System.out.println(arr[i]);
+             }
+             }
+        }
+       }
+
+

@@ -194,7 +194,7 @@ public class ex1
            }
         public void ex15()
         {
-            double sum=0;
+            double sum=0;//לצורך חישוב ממצוע מדוייק יותר
             double avg=0;
          Scanner in=new Scanner(System.in);
          int []arr=new int[10];

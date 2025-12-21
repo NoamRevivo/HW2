@@ -177,7 +177,7 @@ public class ex1
                    }
                return count;
            }
-           public static String reversString (String str) {
+           public static String reversString (String str) {//תרגיל 13
             if (str==null||str.length()==0) return "מחרוזת לא תקינה";
             char [] arr=new  char[str.length()];
             for (int i =0; i<arr.length; i++)
@@ -212,6 +212,38 @@ public class ex1
                  System.out.println(arr[i]);
              }
              }
+        }
+    public static char ex16(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            char currentChar = str.charAt(i);
+
+            for (int j = 0; j < i; j++) {
+                if (str.charAt(j) == currentChar) {
+                    return currentChar;
+                }
+            }
+        }
+
+
+        return '\0';
+    }
+        public static void ex17(String [] arr)
+        {
+            for (int i=0;i<arr.length;i++) {
+                arr[i] = arr[i].replace('a', 'c');
+            }
+        }
+        public static int ex18 (String[] arr)
+        {
+            int minIndex=0;
+            for (int i=1;i<arr.length;i++)
+            {
+                if(arr[i].length()<arr[minIndex].length())
+                {
+                    minIndex=i;
+                }
+            }
+            return minIndex;//החזרת האינדקס של המחרוזת המינימלית במערך
         }
        }
 

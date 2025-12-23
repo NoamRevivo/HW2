@@ -6,7 +6,7 @@ public class ex1
 //        int []arr={0,5,12,13,14,15,16,17,18,19,20,40,100,99,5,5,5,5};
 //       int[]arr2={40,10,9,0,5};
        String str="abc123def!";
-       String str2="noam";
+       String str2="noam revivo";
        System.out.println(ex21(str));
 
      //  int[]arr3=ex9(arr,5);

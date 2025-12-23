@@ -1,14 +1,13 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class ex1
 {
    public static void main(String[] args) {
-        int []arr={0,5,12,13,14,15,16,17,18,19,20,40,100,99,5,5,5,5};
-       int[]arr2={40,10,9,0,5};
-       String str="noam";
+//        int []arr={0,5,12,13,14,15,16,17,18,19,20,40,100,99,5,5,5,5};
+//       int[]arr2={40,10,9,0,5};
+       String str="abc123def!";
        String str2="noam";
-       System.out.println(ex20(str));
+       System.out.println(ex21(str));
 
      //  int[]arr3=ex9(arr,5);
      //  for (int i=0;i<arr3.length;i++)
@@ -296,6 +295,32 @@ public class ex1
             }
             return minChar;
         }
+        public static boolean ex21(String str)
+        {
+            if (str.length()<9)
+            {
+                return false;
+            }
+            int digitCount = 0;
+            int specialCharCount = 0;
+            for (int i = 0; i < str.length(); i++)
+            {
+                char c = str.charAt(i);
+                if (c >= '0' && c <= '9')
+                {
+                    digitCount++;
+                }
+                else if (c == '$' || c == '%' || c == '&' || c == '!') {
+                    specialCharCount++;
+                }
+            }
+            if (digitCount>=2 && specialCharCount == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+        }
        }
-
-
+    }

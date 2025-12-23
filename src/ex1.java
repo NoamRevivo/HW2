@@ -7,8 +7,9 @@ public class ex1
         int []arr={0,5,12,13,14,15,16,17,18,19,20,40,100,99,5,5,5,5};
        int[]arr2={40,10,9,0,5};
        String str="noam";
-       String str2="noajhgfyfyujfjjgcugubjnm";
-       System.out.println(ex10(str,str2));
+       String str2="noam";
+       System.out.println(ex20(str));
+
      //  int[]arr3=ex9(arr,5);
      //  for (int i=0;i<arr3.length;i++)
       // {
@@ -177,13 +178,12 @@ public class ex1
                    }
                return count;
            }
-           public static String reversString (String str) {//תרגיל 13
+           public static String ex13 (String str) {//תרגיל 13
             if (str==null||str.length()==0) return "מחרוזת לא תקינה";
             char [] arr=new  char[str.length()];
             for (int i =0; i<arr.length; i++)
             {
                 arr[i]=str.charAt(i);
-
             }
             String  result="";
             for (int i =str.length()-1; i>=0; i--) {
@@ -244,6 +244,57 @@ public class ex1
                 }
             }
             return minIndex;//החזרת האינדקס של המחרוזת המינימלית במערך
+        }
+        public static String ex19(String str,String str2,char t)
+        {
+          int count=0;
+          int count1=0;
+          for (int i=0;i<str.length();i++)
+          {
+              if (str.charAt(i)==t)
+              {
+                  count++;
+              }
+          }
+            for (int i = 0; i <str2.length() ; i++)
+            {
+            if (str2.charAt(i)==t)
+            {
+                count1++;
+            }
+            }
+            if (count>count1)
+            {
+                return str;
+            }
+            if (count1>count)
+            {
+                return str2;
+            }
+            else return str+str2;
+        }
+        public static char ex20(String str)
+        {
+            char minChar=str.charAt(0);
+            int minCount=str.length();
+            for (int i = 0; i <str.length(); i++)
+            {
+                char currentChar = str.charAt(i);
+                int currentCount=0;
+                for (int j =0; j <str.length(); j++)
+                {
+                    if (str.charAt(j)==currentChar)
+                    {
+                        currentCount++;
+                    }
+                }
+                if (currentCount<minCount)
+                {
+                    minCount = currentCount;
+                    minChar = currentChar;
+                }
+            }
+            return minChar;
         }
        }
 

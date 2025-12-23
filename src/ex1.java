@@ -1,14 +1,14 @@
 import java.util.Arrays;
 import java.util.Scanner;
+
 public class ex1
 {
    public static void main(String[] args) {
-//        int []arr={0,5,12,13,14,15,16,17,18,19,20,40,100,99,5,5,5,5};
-//       int[]arr2={40,10,9,0,5};
-       String str="abc123def!";
-       String str2="noam revivo";
-       System.out.println(ex21(str));
-
+        int []arr={0,5,12,13,14,15,16,17,18,19,20,40,100,99,5,5,5,5};
+       int[]arr2={40,10,9,0,5};
+       String str="noam";
+       String str2="noajhgfyfyujfjjgcugubjnm";
+       System.out.println(ex10(str,str2));
      //  int[]arr3=ex9(arr,5);
      //  for (int i=0;i<arr3.length;i++)
       // {
@@ -177,12 +177,13 @@ public class ex1
                    }
                return count;
            }
-           public static String ex13 (String str) {//תרגיל 13
+           public static String reversString (String str) {
             if (str==null||str.length()==0) return "מחרוזת לא תקינה";
             char [] arr=new  char[str.length()];
             for (int i =0; i<arr.length; i++)
             {
                 arr[i]=str.charAt(i);
+
             }
             String  result="";
             for (int i =str.length()-1; i>=0; i--) {
@@ -212,115 +213,6 @@ public class ex1
              }
              }
         }
-    public static char ex16(String str) {
-        for (int i = 0; i < str.length(); i++) {
-            char currentChar = str.charAt(i);
-
-            for (int j = 0; j < i; j++) {
-                if (str.charAt(j) == currentChar) {
-                    return currentChar;
-                }
-            }
-        }
-
-
-        return '\0';
-    }
-        public static void ex17(String [] arr)
-        {
-            for (int i=0;i<arr.length;i++) {
-                arr[i] = arr[i].replace('a', 'c');
-            }
-        }
-        public static int ex18 (String[] arr)
-        {
-            int minIndex=0;
-            for (int i=1;i<arr.length;i++)
-            {
-                if(arr[i].length()<arr[minIndex].length())
-                {
-                    minIndex=i;
-                }
-            }
-            return minIndex;//החזרת האינדקס של המחרוזת המינימלית במערך
-        }
-        public static String ex19(String str,String str2,char t)
-        {
-          int count=0;
-          int count1=0;
-          for (int i=0;i<str.length();i++)
-          {
-              if (str.charAt(i)==t)
-              {
-                  count++;
-              }
-          }
-            for (int i = 0; i <str2.length() ; i++)
-            {
-            if (str2.charAt(i)==t)
-            {
-                count1++;
-            }
-            }
-            if (count>count1)
-            {
-                return str;
-            }
-            if (count1>count)
-            {
-                return str2;
-            }
-            else return str+str2;
-        }
-        public static char ex20(String str)
-        {
-            char minChar=str.charAt(0);
-            int minCount=str.length();
-            for (int i = 0; i <str.length(); i++)
-            {
-                char currentChar = str.charAt(i);
-                int currentCount=0;
-                for (int j =0; j <str.length(); j++)
-                {
-                    if (str.charAt(j)==currentChar)
-                    {
-                        currentCount++;
-                    }
-                }
-                if (currentCount<minCount)
-                {
-                    minCount = currentCount;
-                    minChar = currentChar;
-                }
-            }
-            return minChar;
-        }
-        public static boolean ex21(String str)
-        {
-            if (str.length()<9)
-            {
-                return false;
-            }
-            int digitCount = 0;
-            int specialCharCount = 0;
-            for (int i = 0; i < str.length(); i++)
-            {
-                char c = str.charAt(i);
-                if (c >= '0' && c <= '9')
-                {
-                    digitCount++;
-                }
-                else if (c == '$' || c == '%' || c == '&' || c == '!') {
-                    specialCharCount++;
-                }
-            }
-            if (digitCount>=2 && specialCharCount == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-        }
        }
-    }
+
+

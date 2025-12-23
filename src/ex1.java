@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ex1 {
     public static void main(String[] args) {
     }
-    public static boolean ex1(int[] arr, int num) {
+    public static boolean ex1(int[] arr, int num) {// סיבוכיות זמן ריצה o(n)
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > num) {
                 return true;
@@ -13,7 +13,7 @@ public class ex1 {
         return false;
     }
 
-    public static int[] ex2(int[] arr, int[] arr2) {
+    public static int[] ex2(int[] arr, int[] arr2) {//סיבוכיות זמן ריצה o(n+m)
         int numOfArray = arr.length + arr2.length;
         int[] newArr = new int[numOfArray];
         for (int i = 0; i < arr.length; i++) {
@@ -26,7 +26,7 @@ public class ex1 {
         }
         return newArr;
     }
-    public static int[] ex3(int[] arr) {
+    public static int[] ex3(int[] arr) {// O(n^2) סיבוכיות זמן ריצה
         int uniqueCount = 0;
         for (int i = 0; i < arr.length; i++)
         {
@@ -60,7 +60,7 @@ public class ex1 {
         return result;
     }
 
-    public static boolean[] ex4(int[] arr) {
+    public static boolean[] ex4(int[] arr) {// סיבוכיות זמן ריצה o(n)
         boolean[] newArr = new boolean[arr.length];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
@@ -71,17 +71,7 @@ public class ex1 {
         }
         return newArr;
     }
-
-    public static int ex6(int[] arr, int num) {
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == num) {
-                count++;
-            }
-        }
-        return count;
-    }
-    public static int ex5(int[] arr) {
+    public static int ex5(int[] arr) {// סיבוכיות זמן ריצה o(n)
         if (arr == null || arr.length < 3) return -1;
         int n = arr.length;
         int i = 0;
@@ -102,7 +92,17 @@ public class ex1 {
         }
         return peakIndex;
     }
-    public static void ex7(int[] arr) {
+    public static int ex6(int[] arr, int num) {// סיבוכיות זמן ריצה o(n)
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == num) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void ex7(int[] arr) {// סיבוכיות זמן ריצה o(n)
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
                 arr[i] = arr[i] * 3;
@@ -111,7 +111,7 @@ public class ex1 {
         }
     }
 
-    public static int ex8(int[] arr, int num) {
+    public static int ex8(int[] arr, int num) {// סיבוכיות זמן ריצה o(n)
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
@@ -122,7 +122,7 @@ public class ex1 {
         return -1;
     }
 
-    public static int[] ex9(int[] arr, int num) {
+    public static int[] ex9(int[] arr, int num) {// סיבוכיות זמן ריצה o(n)
         int countTeenOfNum = 0;
         int countEqualOfNum = 0;
         int contBigOfNum = 0;
@@ -144,7 +144,7 @@ public class ex1 {
         return newArr;
     }
 
-    public static boolean ex10(String str, String str2) {
+    public static boolean ex10(String str, String str2) {// O(1)
         if (str == null || str.length() == 0 || str2 == null || str2.length() == 0)
             return false;
         char firstCharStr1 = str.charAt(0);
@@ -158,7 +158,7 @@ public class ex1 {
         }
     }
 
-    public static int ex11(String[] arr, char test) {
+    public static int ex11(String[] arr, char test) { //סיבוכיות זמן ריצה o(n*m)
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != null) {
@@ -172,7 +172,7 @@ public class ex1 {
         return count;
     }
 
-    public static int ex12(String[] arr, String target) {
+    public static int ex12(String[] arr, String target) {// סיבוכיות זמן ריצה o(n*m)
         int count = 0;
 
         if (target == null) {
@@ -188,7 +188,7 @@ public class ex1 {
         return count;
     }
 
-    public static String reversString(String str) {//ex 13
+    public static String ex13(String str) {// סיבוכיות זמן ריצה o(n)
         if (str == null || str.length() == 0) return "מחרוזת לא תקינה";
         char[] arr = new char[str.length()];
         for (int i = 0; i < arr.length; i++) {
@@ -202,7 +202,7 @@ public class ex1 {
         }
         return result;
     }
-    public static String ex14(String str1, String str2) {
+    public static String ex14(String str1, String str2) {//סיבוכיות זמן ריצה o(n)
         String result = "";
         int length1 = str1.length();
         int length2 = str2.length();
@@ -229,7 +229,7 @@ public class ex1 {
         return result;
     }
 
-    public void ex15() {
+    public void ex15() {// סיבוכיות זמן ריצה o(1)
         double sum = 0;//לצורך חישוב ממצוע מדוייק יותר
         double avg = 0;
         Scanner in = new Scanner(System.in);
@@ -247,7 +247,7 @@ public class ex1 {
         }
     }
 
-    public static char ex16(String str) {
+    public static char ex16(String str) {//O(n^2) סיבוכיות זמן ריצה
         for (int i = 0; i < str.length(); i++) {
             char currentChar = str.charAt(i);
 
@@ -260,12 +260,12 @@ public class ex1 {
 
         return '\0';
     }
-    public static void ex17(String[] arr) {
+    public static void ex17(String[] arr) {//סיבוכיות זמן ריצה o(n*m)
         for (int i = 0; i < arr.length; i++) {
             arr[i] = arr[i].replace('a', 'c');
         }
     }
-    public static int ex18(String[] arr) {
+    public static int ex18(String[] arr) {// סיבוכיות זמן ריצה o(n)
         int minIndex = 0;
         for (int i = 1; i < arr.length; i++) {
             if (arr[i].length() < arr[minIndex].length()) {
@@ -274,7 +274,7 @@ public class ex1 {
         }
         return minIndex;
     }
-    public static char ex20(String str)
+    public static char ex20(String str)//סיבוכיות זמן ריצה o(n^2)
     {
         char minChar=str.charAt(0);
         int minCount=str.length();
@@ -298,7 +298,7 @@ public class ex1 {
         return minChar;
     }
 
-    public static boolean ex21(String str)
+    public static boolean ex21(String str)// סיבוכיות זמן ריצה o(n)
     {
         if (str.length() < 9) {
             return false;
@@ -313,7 +313,7 @@ public class ex1 {
                 specialCharCount++;
             }
         }
-        if (digitCount >= 2 && specialCharCount == 1)
+        if (digitCount >= 2 && specialCharCount ==1)
         {
             return true;
         }

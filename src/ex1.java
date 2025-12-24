@@ -300,7 +300,7 @@ public class ex1 {
         {
             return str2;
         }
-        else return str+str2;
+         return str+str2;
     }
     public static char findMinimumOccurrenceChar(String str)//סיבוכיות זמן ריצה o(n^2)
     {

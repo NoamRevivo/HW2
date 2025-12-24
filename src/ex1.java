@@ -274,6 +274,34 @@ public class ex1 {
         }
         return minIndex;
     }
+    public static String ex19(String str,String str2,char t)
+    {
+        int count=0;//ספירת הפעמים שמופיע התו במחרוזת הראשונה
+        int count1=0;//ספירת הפעמים שמופיע התו במחרוזת השנייה
+        for (int i=0;i<str.length();i++)
+        {
+            if (str.charAt(i)==t)
+            {
+                count++;
+            }
+        }
+        for (int i = 0; i <str2.length(); i++)
+        {
+            if (str2.charAt(i)==t)
+            {
+                count1++;
+            }
+        }
+        if (count>count1)
+        {
+            return str;
+        }
+        if (count1>count)
+        {
+            return str2;
+        }
+        else return str+str2;
+    }
     public static char ex20(String str)//סיבוכיות זמן ריצה o(n^2)
     {
         char minChar=str.charAt(0);
